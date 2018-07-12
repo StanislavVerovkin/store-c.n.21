@@ -1,0 +1,173 @@
+#block-form-registration input,
+#block-form-login input,
+#block-remind input {
+    background: white;
+}
+
+#block-form-registration,
+#block-form-login,
+#block-remind {
+    width: 350px;
+}
+
+#form_login {
+    position: relative;
+    top: 20px;
+}
+
+label.error,
+#rem_message {
+    color: red;
+    margin-left: 5px;
+}
+
+.reg_message_good,
+.rem_message_good {
+    font-family: Royal;
+    font-size: 31px;
+    color: green;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.buttons,
+#buttons_profile {
+    display: flex;
+}
+
+#button-remind_back {
+    position: relative;
+    right: 5px;
+    width: 100px;
+}
+
+#button-remind {
+    position: relative;
+    right: 70px;
+}
+
+.profile_submit {
+    position: relative;
+    right: 5px;
+
+}
+
+strong.container {
+    position: relative;
+    left: 250px;
+}
+
+.bread {
+    position: relative;
+    left: 40px;
+
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.topbar-email {
+    position: relative;
+    right: 10px;
+}
+
+body {
+    background-color: transparent;
+}
+
+.videoContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    /* optional */
+    width: 100%;
+    height: 100%;
+}
+
+#shop-cart,
+#container-white {
+    background-color: transparent;
+}
+
+#feed_message {
+    border: transparent;
+}
+
+#form_submit {
+    position: relative;
+    bottom: 18px;
+}
+
+#topbar {
+    position: relative;
+    background-color: transparent;
+}
+
+#social {
+    color: black;
+}
+
+#canvas {
+    position: relative;
+    right: 300px;
+    bottom: 100px;
+
+}
+
+#canvas_register {
+    position: relative;
+    bottom: 800px;
+    left: 500px;
+}
+
+#canvas_about {
+    position: relative;
+    bottom: 450px;
+    right: 260px;
+}
+
+#grey {
+    background-color: transparent;
+}
+
+#input-search {
+    color: black;
+}
+
+#block-grey {
+    background-color: #f1f1f1;
+}
+
+#girl {
+    background-image: url("/images/homepage/girl.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
