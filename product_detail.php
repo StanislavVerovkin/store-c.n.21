@@ -127,7 +127,7 @@ if (mysqli_num_rows($result) > 0) {
 						<div class="w-size16 flex-m flex-w">
 							<div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10" product_id="' . $row['products_id'] . '">
 								<!-- Button -->
-								<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+								<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4 add-detail">
 									Add to Cart
 								</button>
 							</div>
@@ -182,7 +182,7 @@ if (mysqli_num_rows($result) > 0) {
     $('.btn-addcart-product-detail').each(function () {
         let nameProduct = $('.product-detail-name').html();
         $(this).on('click', function () {
-            swal(nameProduct, "Available from October 8th", "success");
+            swal(nameProduct, "is added to cart!", "success");
         });
     });
 </script>
