@@ -566,7 +566,8 @@ iframe {
 
 /* ------------------------------------ */
 .topbar-email,
-.topbar-child1 {
+.topbar-child1,
+.customer {
     font-family: Royal;
     font-size: 13px;
     color: white;

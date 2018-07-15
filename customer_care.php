@@ -27,12 +27,88 @@ include "./reg/auth_cookie.php";
 
         <br>
 
-        <h6>
-            SHIPPING METHODS
-        </h6>
+        <a href="#shipping-methods">
+            <h6>
+                SHIPPING METHODS
+            </h6>
+        </a>
+        <a href="#orders">
+            <h6>
+                Orders
+            </h6>
+        </a>
+        <a href="#available-items">
+            <h6>
+                Available items
+            </h6>
+        </a>
+        <a href="#preorder-items">
+            <h6>
+                Pre-orderable items
+            </h6>
+        </a>
+        <a href="#shipping-costs">
+            <h6>
+                SHIPPING COSTS
+            </h6>
+        </a>
+        <a href="#delivery-kiev">
+            <h6>
+                DELIVERY FOR KYIV
+            </h6>
+        </a>
+        <a href="#delivery-ukraine">
+            <h6>
+                DELIVERY FOR UKRAINE
+            </h6>
+        </a>
+        <a href="#delivery-world">
+            <h6>
+                DELIVERY FOR WORLD
+            </h6>
+        </a>
+        <a href="#refund">
+            <h6>
+                REFUND
+            </h6>
+        </a>
+        <a href="#returns-and-exchange">
+            <h6>
+                RETURNS AND EXCHANGE
+            </h6>
+        </a>
+        <a href="#payment-order-kiev">
+            <h6>
+                PAYMENT ORDER KIEV
+            </h6>
+        </a>
+        <a href="#payment-order-ukraine">
+            <h6>
+                PAYMENT ORDER UKRAINE
+            </h6>
+        </a>
+        <a href="#payment-order-world">
+            <h6>
+                PAYMENT ORDER WORLD
+            </h6>
+        </a>
+        <a href="#prices-and-currencies">
+            <h6>
+                PRICES AND CURRENCIES
+            </h6>
+        </a>
+        <a href="#terms-and-conditions">
+            <h6>
+                TERMS AND CONDITIONS
+            </h6>
+        </a>
 
         <br>
 
+        <h6><a name="shipping-methods"></a>
+            <strong>SHIPPING METHODS</strong>
+        </h6>
+        <br>
         <p>
             c-n-21.com delivers parcels all over the world via DHL Express and NovaPoshta. Also c-n-21.com offers
             delivery
@@ -50,8 +126,8 @@ include "./reg/auth_cookie.php";
 
         <br>
 
-        <h6>
-            Orders
+        <h6><a name="orders"></a>
+            <strong>Orders</strong>
         </h6>
 
         <br>
@@ -82,8 +158,8 @@ include "./reg/auth_cookie.php";
 
         <br>
 
-        <h6>
-            Available items
+        <h6><a name="available-items"></a>
+            <strong>Available items</strong>
         </h6>
 
         <br>
@@ -103,8 +179,8 @@ include "./reg/auth_cookie.php";
 
         <br>
 
-        <h6>
-            Pre-orderable items
+        <h6><a name="preorder-items"></a>
+            <strong>Pre-orderable items</strong>
         </h6>
 
         <br>
@@ -139,8 +215,8 @@ include "./reg/auth_cookie.php";
         </p>
         <br>
 
-        <h6>
-            SHIPPING COSTS
+        <h6><a name="shipping-costs"></a>
+            <strong>SHIPPING COSTS</strong>
         </h6>
         <br>
         <p>
@@ -174,9 +250,9 @@ include "./reg/auth_cookie.php";
         <br>
         SHIPPING COST WORLD: € 30
 
-        <h6>
+        <h6><a name="delivery-kiev"></a>
             <br>
-            DELIVERY FOR KYIV
+            <strong>DELIVERY FOR KYIV</strong>
         </h6>
         <br>
 
@@ -189,8 +265,8 @@ include "./reg/auth_cookie.php";
         </p>
         <br>
 
-        <h6>
-            DELIVERY FOR UKRAINE
+        <h6><a name="delivery-ukraine"></a>
+            <strong>DELIVERY FOR UKRAINE</strong>
         </h6>
 
         <p>
@@ -200,8 +276,8 @@ include "./reg/auth_cookie.php";
         </p>
         <br>
 
-        <h6>
-            DELIVERY FOR WORLD
+        <h6><a name="delivery-world"></a>
+            <strong>DELIVERY FOR WORLD</strong>
         </h6>
 
         <br>
@@ -212,8 +288,8 @@ include "./reg/auth_cookie.php";
 
         <br>
 
-        <h6>
-            REFUND
+        <h6><a name="refund"></a>
+            <strong>REFUND</strong>
         </h6>
 
         <p>
@@ -232,8 +308,8 @@ include "./reg/auth_cookie.php";
         </p>
         <br>
 
-        <h6>
-            RETURNS AND EXCHANGE
+        <h6><a name="returns-and-exchange"></a>
+            <strong>RETURNS AND EXCHANGE</strong>
         </h6>
         <br>
 
@@ -281,8 +357,8 @@ include "./reg/auth_cookie.php";
         </p>
         <br>
 
-        <h6>
-            PAYMENT ORDER KIEV
+        <h6><a name="payment-order-kiev"></a>
+            <strong>PAYMENT ORDER KIEV</strong>
         </h6>
 
         <br>
@@ -306,8 +382,8 @@ include "./reg/auth_cookie.php";
         </p>
         <br>
 
-        <h6>
-            PAYMENT ORDER UKRAINE
+        <h6><a name="payment-order-ukraine"></a>
+            <strong>PAYMENT ORDER UKRAINE</strong>
         </h6>
         <br>
 
@@ -321,9 +397,9 @@ include "./reg/auth_cookie.php";
         2. Bank card when making an online order. We accept: Visa, MasterCard.
         <br>
 
-        <h6>
+        <h6><a name="payment-order-world"></a>
             <br>
-            PAYMENT ORDER WORLD
+            <strong>PAYMENT ORDER WORLD</strong>
         </h6>
         <br>
 
@@ -349,9 +425,9 @@ include "./reg/auth_cookie.php";
         5. The validity period of the card, which is written on the front side of the card
         <br>
 
-        <h6>
+        <h6><a name="prices-and-currencies"></a>
             <br>
-            PRICES AND CURRENCIES
+            <strong>PRICES AND CURRENCIES</strong>
         </h6>
         <br>
 
@@ -372,9 +448,9 @@ include "./reg/auth_cookie.php";
             fluctuating exchange rates.
         </p>
 
-        <h6>
+        <h6><a name="terms-and-conditions"></a>
             <br>
-            TERMS AND CONDITIONS
+            <strong>TERMS AND CONDITIONS</strong>
         </h6>
 
         <br>

@@ -138,6 +138,7 @@ iframe {
     position: relative;
     right: 300px;
     bottom: 100px;
+    width: 1700px;
 
 }
 
@@ -149,8 +150,9 @@ iframe {
 
 #canvas_about {
     position: relative;
-    bottom: 450px;
-    right: 260px;
+    right: 220px;
+    bottom: 500px;
+    width: 1700px;
 }
 
 #grey {

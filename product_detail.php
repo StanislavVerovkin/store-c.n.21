@@ -17,6 +17,7 @@ if ($id != $_SESSION['count_id']) {
 }
 
 $_SESSION['count_id'] = $id;
+
 ?>
 
 <!DOCTYPE html>

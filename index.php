@@ -58,7 +58,10 @@ if (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|
                             </div>
                   ';
                 } else {
-                    echo '<a href="/registration" class="topbar-email">Sign in</a>';
+                    echo '<a href="/registration" class="topbar-email">Sign in</a>
+                            <li>
+                                <a class="customer" href="/customer_care">Customer care</a>
+                            </li>';
                 }
                 ?>
 
@@ -98,9 +101,6 @@ if (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|
 
             <li>
                 <a href="/contact_us">Contact</a>
-            </li>
-            <li>
-                <a href="/customer_care">Customer care</a>
             </li>
         </ul>
     </nav>
