@@ -11,6 +11,7 @@ if (isset($_POST['submit_data'])) {
     $_SESSION['order_email'] = $_POST['order_email'];
     $_SESSION['order_phone'] = $_POST['order_phone'];
     $_SESSION['order_address'] = $_POST['order_address'];
+    $_SESSION['order_delivery'] = $_POST['order_delivery'];
 
     header("Location: proceed_checkout_final.php");
 }
@@ -43,6 +44,17 @@ if (isset($_POST['submit_data'])) {
             echo
                 '
         <form method="post" id="form_checkout">
+        <h4>Delivery methods:</h4>
+            <ul id="info-radio">
+                <li>
+                    <input required type="radio" name="order_delivery" class="order_delivery" id="order_delivery1" value="Nova Poshta"/>
+                    <label class="label_delivery" for="order_delivery1">Nova Poshta</label>
+                </li>
+                <li>
+                    <input required type="radio" name="order_delivery" class="order_delivery" id="order_delivery2" value="Representative of the brand"/>
+                    <label class="label_delivery" for="order_delivery2">Representative of the brand</label>
+                </li>
+            </ul>
             <p id="reg_message"></p>
             <div id="block-form-registration">
                 <div class="form-group">
@@ -74,19 +86,29 @@ if (isset($_POST['submit_data'])) {
         } else {
             echo '
                   <p class="reg_message_good">Your contact data successfully saved after authorization</p>
+                   <h4>Delivery methods:</h4>
+            <ul id="info-radio">
+                <li>
+                    <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery1" value="Nova Poshta"/>
+                    <label class="label_delivery" for="order_delivery1">Nova Poshta</label>
+                </li>
+                <li>
+                    <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery2" value="Representative of the brand"/>
+                    <label class="label_delivery" for="order_delivery2">Representative of the brand</label>
+                </li>
+            </ul>
                   <div class="w-size2 p-t-20">
                   <a href="/proceed_checkout_final">
                     <button type="submit"class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                         Next
                     </button>
                     </a>
-                </div>
+                  </div>
                   ';
         }
         ?>
     </div>
 </section>
-
 <?php include "include/block-footer.php" ?>
 
 <?php include "include/block-js.php"; ?>

@@ -173,3 +173,8 @@ iframe {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.form_delievery {
+    position: relative;
+    bottom: 10px;
+}

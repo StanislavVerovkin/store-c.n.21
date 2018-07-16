@@ -88,7 +88,6 @@ if (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|
             <li>
                 <a href="/shop">Shop</a>
             </li>
-
             <!--            <li class="sale-noti">-->
             <!--                <a href="/sale">Sale</a>-->
             <!--            </li>-->
