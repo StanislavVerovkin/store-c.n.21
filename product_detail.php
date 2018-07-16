@@ -49,9 +49,12 @@ if (mysqli_num_rows($result) > 0) {
                 Home
                 <i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
             </a>
-        
-            <a href="/view_categories?cat=' . $row['category'] . '" class="s-text16">
+            <a href="#" class="s-text16">
                 ' . $row['category'] . '
+                <i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
+            </a>
+            <a href="/view_categories?cat=' . $row['category'] . '&family=' . $row['family'] . '" class="s-text16">
+                ' . $row['family'] . '
                 <i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
             </a>
             <span class="s-text17">

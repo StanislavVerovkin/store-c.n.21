@@ -25,6 +25,9 @@
                 if ($_SESSION['auth'] == 'yes_auth') {
                     echo '
                             <a href="#" class="topbar-email">' . $_SESSION['auth_login'] . '</a>
+                            <li>
+                                <a class="customer" href="/customer_care">Customer care</a>
+                            </li>
                             <div class="w-size11">
                                 <!-- Button -->
                                 <button  class="flex-c-m size4 bg7 bo-rad-15 hov1 s-text14 trans-0-4 logout">

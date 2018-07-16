@@ -25,7 +25,7 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
             $chk_sale = 'labelnew';
         }
 
-        $link->query("INSERT INTO table_products(title,price,category,short_description,description,label,datetime,sale_price)
+        $link->query("INSERT INTO table_products(title,price,category,short_description,description,label,datetime,sale_price, family)
             VALUES(						
                 '" . $_POST["form_title"] . "',
                 '" . $_POST["form_price"] . "',
@@ -34,7 +34,8 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
                 '" . $_POST["txt2"] . "',
                 '" . $chk_sale . "',
                 NOW(),
-                '" . $_POST["sale_price"] . "'
+                '" . $_POST["sale_price"] . "',
+                '" . $_POST["form_type_family"] . "'
             )");
 
         $id = mysqli_insert_id($link);
@@ -100,7 +101,19 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
                             <option value="Men">Men</option>
                             <option value="Accessories">Accessories</option>
                             <option value="Sale">Sale</option>
-                            <option value="Pre-order">Pre-order</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Family</label>
+                        <select name="form_type_family" id="type" size="1">
+                            <option value="Accessories">Accessories</option>
+                            <option value="Dresses">Dresses</option>
+                            <option value="Outwear">Outwear</option>
+                            <option value="Shorts">Shorts</option>
+                            <option value="Sweatshirts">Sweatshirts</option>
+                            <option value="Sweatshirts">T-shirts</option>
+                            <option value="Sweatshirts">Jackets</option>
+                            <option value="Sweatshirts">Pants</option>
                         </select>
                     </li>
                 </ul>
