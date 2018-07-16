@@ -274,7 +274,7 @@ switch ($sorting) {
                 </div>
 
                 <!-- Pagination -->
-                <?php include 'settings/show-pagination.php' ?>
+                <?php include 'settings/show-pagination-cat.php' ?>
 
             </div>
         </div>
