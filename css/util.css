@@ -10040,7 +10040,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 }
 
 .m-text6 {
-    font-family: Royal;
+    font-family: Royal, sans-serif;
     font-size: 16px;
     color: black;
     text-transform: uppercase;

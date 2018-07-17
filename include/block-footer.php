@@ -24,38 +24,7 @@
             </div>
         </div>
 
-        <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-            <h4 class="s-text12 p-b-30">
-                Categories
-            </h4>
 
-            <ul>
-                <li class="p-b-9">
-                    <a href="/shop" class="s-text7">
-                        All
-                    </a>
-                </li>
-
-                <li class="p-b-9">
-                    <a href="/view_categories?cat=women" class="s-text7">
-                        Women
-                    </a>
-                </li>
-
-                <li class="p-b-9">
-                    <a href="/view_categories?cat=men" class="s-text7">
-                        Men
-                    </a>
-                </li>
-
-                <li class="p-b-9">
-                    <a href="/view_categories?cat=accessories" class="s-text7">
-                        Accessories
-                    </a>
-                </li>
-                <hr>
-            </ul>
-        </div>
 
         <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
             <h4 class="s-text12 p-b-30">
@@ -92,8 +61,8 @@
         <a href="#">
             <img class="h-size2" src="/images/icons/mastercard.png" alt="IMG-MASTERCARD">
         </a>
-        <div class="t-center s-text8 p-t-20">
-            Copyright © 2018 All rights reserved.
+        <div style="color: white" class="t-center s-text8 p-t-20">
+            C.N.21 © 2018 All rights reserved.
         </div>
     </div>
 </footer>

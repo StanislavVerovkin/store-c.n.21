@@ -68,7 +68,7 @@ if (mysqli_num_rows($result) > 0) {
                   <li class="list-group-item">' . $_SESSION['auth_email'] . '</li>
                   <li class="list-group-item">' . $_SESSION['auth_phone'] . '</li>
                   <li class="list-group-item">' . $_SESSION['auth_address'] . '</li>
-                  <li class="list-group-item">' . $_SESSION['auth_delivery'] . '</li>
+                  <li class="list-group-item">' . $_SESSION['order_delivery'] . '</li>
             </ul>     
             <strong style="position: relative; left: 250px">Total: $' . $total . '</strong>
             ';
@@ -81,7 +81,7 @@ if (mysqli_num_rows($result) > 0) {
                 <input type="hidden" name="WMI_CURRENCY_ID" value="840"/>
                 <input type="hidden" name="WMI_DESCRIPTION" value="Pay for product"/>
                 <input type="hidden" name="WMI_SUCCESS_URL" value="http://php-less.xyz/"/>
-                <input type="hidden" name="WMI_FAIL_URL" value="http://php-less.xyz/cart.php"/>
+                <input type="hidden" name="WMI_FAIL_URL" value="http://php-less.xyz/cart"/>
                 <input class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" value="Pay" type="submit"/>
             </form>
         </div>

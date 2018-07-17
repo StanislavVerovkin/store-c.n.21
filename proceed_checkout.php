@@ -12,6 +12,7 @@ if (isset($_POST['submit_data'])) {
     $_SESSION['order_phone'] = $_POST['order_phone'];
     $_SESSION['order_address'] = $_POST['order_address'];
     $_SESSION['order_delivery'] = $_POST['order_delivery'];
+    $_SESSION['order_delivery_auth'] = $_POST['order_delivery_auth'];
 
     header("Location: proceed_checkout_final.php");
 }
@@ -45,34 +46,36 @@ if (isset($_POST['submit_data'])) {
                 '
         <form method="post" id="form_checkout">
         <h4>Delivery methods:</h4>
+        <hr>
             <ul id="info-radio">
                 <li>
                     <input required type="radio" name="order_delivery" class="order_delivery" id="order_delivery1" value="Nova Poshta"/>
-                    <label class="label_delivery" for="order_delivery1">Nova Poshta</label>
+                    <label class="label_delivery" for="order_delivery1">Nova Poshta (Ukraine, World)</label>
                 </li>
                 <li>
                     <input required type="radio" name="order_delivery" class="order_delivery" id="order_delivery2" value="Representative of the brand"/>
-                    <label class="label_delivery" for="order_delivery2">Representative of the brand</label>
+                    <label class="label_delivery" for="order_delivery2">Representative of the brand (Kiev only)</label>
                 </li>
+                <hr>
             </ul>
             <p id="reg_message"></p>
             <div id="block-form-registration">
                 <div class="form-group">
                     <input type="text" class="form-control" name="order_surname" id="order_surname"
-                           placeholder="Surname" value="' . $_SESSION['order_surname'] . '">
+                           placeholder="Surname (ex. Smith)" value="' . $_SESSION['order_surname'] . '">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="order_name" id="order_name" placeholder="Name" value="' . $_SESSION['order_name'] . '">
+                    <input type="text" class="form-control" name="order_name" id="order_name" placeholder="Name (ex. John)" value="' . $_SESSION['order_name'] . '">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" name="order_email" id="order_email" placeholder="E-mail" value="' . $_SESSION['order_email'] . '">
+                    <input type="email" class="form-control" name="order_email" id="order_email" placeholder="E-mail (ex. john_smith@gmail.com)" value="' . $_SESSION['order_email'] . '">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="order_phone" id="order_phone" placeholder="Phone" value="' . $_SESSION['order_phone'] . '">
+                    <input type="text" class="form-control" name="order_phone" id="order_phone" placeholder="Phone (ex. +38 063 *** ** **)" value="' . $_SESSION['order_phone'] . '">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" name="order_address" id="order_address"
-                           placeholder="Address" value="' . $_SESSION['order_address'] . '">
+                           placeholder="Address (ex. str. Kreschatik 14, apt. 13)" value="' . $_SESSION['order_address'] . '">
                 </div>
                 <div class="w-size2 p-t-20">
                     <button type="submit" name="submit_data" id="confirm-button-next"
@@ -81,29 +84,35 @@ if (isset($_POST['submit_data'])) {
                     </button>
                 </div>
             </div>
+            <hr>
         </form>
             ';
         } else {
             echo '
                   <p class="reg_message_good">Your contact data successfully saved after authorization</p>
+                                     <hr>
+            <form method="post">
                    <h4>Delivery methods:</h4>
+                   <hr>
             <ul id="info-radio">
                 <li>
                     <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery1" value="Nova Poshta"/>
-                    <label class="label_delivery" for="order_delivery1">Nova Poshta</label>
+                    <label class="label_delivery" for="order_delivery1">Nova Poshta (Ukraine, World)</label>
                 </li>
                 <li>
                     <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery2" value="Representative of the brand"/>
-                    <label class="label_delivery" for="order_delivery2">Representative of the brand</label>
+                    <label class="label_delivery" for="order_delivery2">Representative of the brand (Kiev only)</label>
                 </li>
             </ul>
                   <div class="w-size2 p-t-20">
                   <a href="/proceed_checkout_final">
-                    <button type="submit"class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+                    <button type="submit" name="submit_data" id="confirm-button-next" class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                         Next
                     </button>
-                    </a>
+                  </a>
                   </div>
+                 <hr>
+                 </form>
                   ';
         }
         ?>

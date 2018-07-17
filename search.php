@@ -272,9 +272,6 @@ switch ($sorting) {
                     }
                     ?>
                 </div>
-
-                <?php include 'settings/show-pagination.php' ?>
-
             </div>
         </div>
     </div>
