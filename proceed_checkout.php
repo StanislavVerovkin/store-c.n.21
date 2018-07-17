@@ -6,15 +6,60 @@ include "./reg/auth_cookie.php";
 
 if (isset($_POST['submit_data'])) {
 
-    $_SESSION['order_surname'] = $_POST['order_surname'];
-    $_SESSION['order_name'] = $_POST['order_name'];
-    $_SESSION['order_email'] = $_POST['order_email'];
-    $_SESSION['order_phone'] = $_POST['order_phone'];
-    $_SESSION['order_address'] = $_POST['order_address'];
-    $_SESSION['order_delivery'] = $_POST['order_delivery'];
-    $_SESSION['order_delivery_auth'] = $_POST['order_delivery_auth'];
+    if ($_SESSION['auth'] == 'yes_auth') {
 
-    header("Location: proceed_checkout_final.php");
+        $link->query("INSERT INTO orders(order_datetime,order_delievery,order_name, order_surname,order_address,order_phone,order_email)
+						VALUES(	
+                             NOW(),
+                            '" . $_POST["order_delivery"] . "',					
+							'" . $_SESSION['auth_name'] . "',
+							'" . $_SESSION['auth_surname'] . "',
+                            '" . $_SESSION['auth_address'] . "',
+                            '" . $_SESSION['auth_phone'] . "',
+                            '" . $_SESSION['auth_email'] . "'                              
+						    )");
+
+    } else {
+        $_SESSION['order_surname'] = $_POST['order_surname'];
+        $_SESSION['order_name'] = $_POST['order_name'];
+        $_SESSION['order_email'] = $_POST['order_email'];
+        $_SESSION['order_phone'] = $_POST['order_phone'];
+        $_SESSION['order_address'] = $_POST['order_address'];
+        $_SESSION['order_delivery'] = $_POST['order_delivery'];
+        $_SESSION['order_delivery_auth'] = $_POST['order_delivery_auth'];
+
+        $link->query("INSERT INTO orders(order_datetime,order_delievery,order_name,order_surname,order_address,order_phone,order_email)
+						VALUES(	
+                             NOW(),
+                            '" . $_POST["order_delivery"] . "',				
+                            '" . $_POST["order_name"] . "',				
+                            '" . $_POST["order_surname"] . "',				
+                            '" . $_POST["order_address"] . "',				
+                            '" . $_POST["order_phone"] . "',			
+                            '" . $_POST["order_email"] . "'			
+						    )");
+    }
+
+    $_SESSION["order_id"] = mysqli_insert_id($link);
+
+    $result = $link->query("SELECT * FROM cart WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'");
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_array($result);
+
+        do {
+
+            $link->query("INSERT INTO buy_products(buy_id_order,buy_id_product,buy_count_product)
+						VALUES(	
+                            '" . $_SESSION["order_id"] . "',					
+							'" . $row["cart_id_product"] . "',
+                            '" . $row["cart_count"] . "'                   
+						    )");
+
+
+        } while ($row = mysqli_fetch_array($result));
+    }
+
+    header("Location: proceed_checkout_final");
 }
 ?>
 
