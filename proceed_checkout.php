@@ -43,18 +43,19 @@ if (isset($_POST['submit_data'])) {
     $_SESSION["order_id"] = mysqli_insert_id($link);
 
     $result = $link->query("SELECT * FROM cart WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'");
+
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_array($result);
 
         do {
 
-            $link->query("INSERT INTO buy_products(buy_id_order,buy_id_product,buy_count_product)
+            $link->query("INSERT INTO buy_products(buy_id_order,buy_id_product,buy_count_product,buy_size_product)
 						VALUES(	
                             '" . $_SESSION["order_id"] . "',					
 							'" . $row["cart_id_product"] . "',
-                            '" . $row["cart_count"] . "'                   
+                            '" . $row["cart_count"] . "',                   
+                            '" . $row["cart_size"] . "'                   
 						    )");
-
 
         } while ($row = mysqli_fetch_array($result));
     }

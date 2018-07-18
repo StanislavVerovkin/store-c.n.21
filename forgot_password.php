@@ -26,21 +26,13 @@
     <span class="s-text17">Forgot password</span>
 </div>
 <section class="cart bgwhite p-t-70 p-b-100">
-        <div class="container">
+    <div class="container">
         <div id="rem_message"></div>
         <div id="block-remind">
             <div class="form-group">
                 <input type="email" class="form-control" id="remind-email" placeholder="Your E-mail">
             </div>
             <div class="buttons">
-                <div class="w-size2 p-t-20">
-                    <a href="/registration">
-                        <button id="button-remind_back"
-                                class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-                            Go back
-                        </button>
-                    </a>
-                </div>
                 <div class="w-size2 p-t-20">
                     <button type="submit" id="button-remind"
                             class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">

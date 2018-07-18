@@ -82,6 +82,7 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
                             <th>Name of product</th>
                             <th>Price</th>
                             <th>Quantity</th>
+                            <th>Size</th>
                         </tr>
                         ';
                         $query_product = $link->query("SELECT * FROM buy_products,table_products WHERE buy_products.buy_id_order = '$id' AND table_products.products_id = buy_products.buy_id_product");
@@ -96,6 +97,7 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
                                     <td  align="center" >' . $result_query["title"] . '</td>
                                     <td  align="center" >' . $result_query["price"] . '</td>
                                     <td  align="center" >' . $result_query["buy_count_product"] . '</td>
+                                    <td  align="center" >' . $result_query["buy_size_product"] . '</td>
                                 </tr>
                                         ';
                         } while ($result_query = mysqli_fetch_array($query_product));
@@ -123,14 +125,16 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
                                     <th>Name</th>
                                     <th>Surname</th>
                                     <th>Address</th>
-                                    <th>Phone, Email</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
                                 </tr>
 
                                  <tr>
                                     <td  align="center" >' . $row["order_name"] . '</td>
                                     <td  align="center" >' . $row["order_surname"] . '</td>
                                     <td  align="center" >' . $row["order_address"] . '</td>
-                                    <td  align="center" >' . $row["order_phone"] . '</br>' . $row["order_email"] . '</td>
+                                    <td  align="center" >' . $row["order_phone"] . '</td>
+                                    <td  align="center" >' . $row["order_email"] . '
                                 </tr>
                                 </table>
                                         ';
