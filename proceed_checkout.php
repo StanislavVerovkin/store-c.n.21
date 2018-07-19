@@ -107,7 +107,7 @@ if (isset($_POST['submit_data'])) {
                 <hr>
             </ul>
             <p id="reg_message"></p>
-            <div id="block-form-registration">
+             <div id="block-form-registration">
                 <div class="form-group">
                 <label>example: Smith</label>
                     <input type="text" class="form-control" name="order_surname" id="order_surname" placeholder="Surname" value="' . $_SESSION['order_surname'] . '">
@@ -121,7 +121,7 @@ if (isset($_POST['submit_data'])) {
                     <input type="email" class="form-control" name="order_email" id="order_email" placeholder="E-mail" value="' . $_SESSION['order_email'] . '">
                 </div>
                 <div class="form-group">
-                    <label>example: +38 063 *** ** **</label>
+                    <label>example: +38 063 123 11 22</label>
                     <input type="text" class="form-control" name="order_phone" id="order_phone" placeholder="Phone" value="' . $_SESSION['order_phone'] . '">
                 </div>
                 <div class="form-group">
@@ -136,8 +136,7 @@ if (isset($_POST['submit_data'])) {
                         Next
                     </button>
                 </div>
-                </div>
-            </div>
+              </div>
             <hr>
         </form>
             ';
@@ -158,6 +157,7 @@ if (isset($_POST['submit_data'])) {
                     <label class="label_delivery" for="order_delivery2">Representative of the brand (Kiev only)</label>
                 </li>
             </ul>
+                  <textarea rows="3" style="border: none; width: 60%" type="text" placeholder="Post office number or Additional info" class="form-control" name="order_note" id="order_note">' . $_SESSION['order_note'] . '</textarea>
                   <div class="w-size2 p-t-20">
                   <a href="/proceed_checkout_final">
                     <button type="submit" name="submit_data" id="confirm-button-next" class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
