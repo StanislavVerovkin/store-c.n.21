@@ -28,7 +28,7 @@ label.error,
 
 .reg_message_good,
 .rem_message_good {
-    font-family: Royal;
+    font-family: Royal,sans-serif;
     font-size: 31px;
     color: green;
     line-height: 1.2;
@@ -156,7 +156,7 @@ iframe {
 #canvas_about {
     position: relative;
     right: 220px;
-    bottom: 500px;
+    bottom: 550px;
     width: 1700px;
 }
 
@@ -173,9 +173,7 @@ iframe {
 }
 
 #girl {
-    background-image: url("/images/homepage/girl.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("/images/homepage/girl.jpg") no-repeat center;
     background-size: cover;
 }
 
