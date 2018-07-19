@@ -601,7 +601,7 @@ iframe {
     flex-wrap: wrap;
     width: 100%;
     height: 80px;
-    background-color black;
+    background-color: black;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -1098,7 +1098,6 @@ li.sale-noti > a {
 
 .side-menu .sub-menu > li {
     padding-left: 12px;
-    padding-top:
 }
 
 .side-menu .sub-menu a:hover {
