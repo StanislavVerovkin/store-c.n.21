@@ -27,8 +27,9 @@ if (isset($_POST['submit_data'])) {
         $_SESSION['order_address'] = $_POST['order_address'];
         $_SESSION['order_delivery'] = $_POST['order_delivery'];
         $_SESSION['order_delivery_auth'] = $_POST['order_delivery_auth'];
+        $_SESSION['order_note'] = $_POST['order_note'];
 
-        $link->query("INSERT INTO orders(order_datetime,order_delievery,order_name,order_surname,order_address,order_phone,order_email)
+        $link->query("INSERT INTO orders(order_datetime,order_delievery,order_name,order_surname,order_address,order_phone,order_email,order_note)
 						VALUES(	
                              NOW(),
                             '" . $_POST["order_delivery"] . "',				
@@ -36,7 +37,8 @@ if (isset($_POST['submit_data'])) {
                             '" . $_POST["order_surname"] . "',				
                             '" . $_POST["order_address"] . "',				
                             '" . $_POST["order_phone"] . "',			
-                            '" . $_POST["order_email"] . "'			
+                            '" . $_POST["order_email"] . "',			
+                            '" . $_POST["order_note"] . "'			
 						    )");
     }
 
@@ -107,27 +109,33 @@ if (isset($_POST['submit_data'])) {
             <p id="reg_message"></p>
             <div id="block-form-registration">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="order_surname" id="order_surname"
-                           placeholder="Surname (ex. Smith)" value="' . $_SESSION['order_surname'] . '">
+                <label>example: Smith</label>
+                    <input type="text" class="form-control" name="order_surname" id="order_surname" placeholder="Surname" value="' . $_SESSION['order_surname'] . '">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="order_name" id="order_name" placeholder="Name (ex. John)" value="' . $_SESSION['order_name'] . '">
+                    <label>example: John</label>
+                    <input type="text" class="form-control" name="order_name" id="order_name" placeholder="Name" value="' . $_SESSION['order_name'] . '">
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" name="order_email" id="order_email" placeholder="E-mail (ex. john_smith@gmail.com)" value="' . $_SESSION['order_email'] . '">
+                    <label>example: john_smith@gmail.com</label>
+                    <input type="email" class="form-control" name="order_email" id="order_email" placeholder="E-mail" value="' . $_SESSION['order_email'] . '">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="order_phone" id="order_phone" placeholder="Phone (ex. +38 063 *** ** **)" value="' . $_SESSION['order_phone'] . '">
+                    <label>example: +38 063 *** ** **</label>
+                    <input type="text" class="form-control" name="order_phone" id="order_phone" placeholder="Phone" value="' . $_SESSION['order_phone'] . '">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="order_address" id="order_address"
-                           placeholder="Address (ex. str. Kreschatik 14, apt. 13)" value="' . $_SESSION['order_address'] . '">
+                    <label>example: str. Kreschatik 14, apt. 13</label>
+                    <input type="text" class="form-control" name="order_address" id="order_address"placeholder="Address" value="' . $_SESSION['order_address'] . '"/>
+                <div class="form-group">
+                    <textarea rows="3" style="border: none; margin-top: 30px;" type="text" placeholder="Post office number or Additional info" class="form-control" name="order_note" id="order_note">' . $_SESSION['order_note'] . '</textarea>
                 </div>
                 <div class="w-size2 p-t-20">
                     <button type="submit" name="submit_data" id="confirm-button-next"
                             class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
                         Next
                     </button>
+                </div>
                 </div>
             </div>
             <hr>

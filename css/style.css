@@ -4,6 +4,11 @@
     background: white;
 }
 
+#block-form-registration label {
+    font-style: italic;
+    color: #c7bdbd;
+}
+
 #block-form-registration,
 #block-form-login,
 #block-remind {

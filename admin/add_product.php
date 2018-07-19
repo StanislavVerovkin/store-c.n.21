@@ -111,9 +111,9 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
                             <option value="Outwear">Outwear</option>
                             <option value="Shorts">Shorts</option>
                             <option value="Sweatshirts">Sweatshirts</option>
-                            <option value="Sweatshirts">T-shirts</option>
-                            <option value="Sweatshirts">Jackets</option>
-                            <option value="Sweatshirts">Pants</option>
+                            <option value="T-shirts">T-shirts</option>
+                            <option value="Jackets">Jackets</option>
+                            <option value="Pants">Pants</option>
                         </select>
                     </li>
                 </ul>
@@ -127,7 +127,7 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
                 <div class="div-editor1">
                     <textarea id="editor1" name="txt1" cols="100" rows="20"></textarea>
                     <script type="text/javascript">
-                        var ckeditor1 = CKEDITOR.replace("editor1");
+                        let ckeditor1 = CKEDITOR.replace("editor1");
                         AjexFileManager.init({
                             returnTo: "ckeditor",
                             editor: ckeditor1
@@ -138,7 +138,7 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
                 <div class="div-editor1">
                     <textarea id="editor2" name="txt2" cols="100" rows="20"></textarea>
                     <script type="text/javascript">
-                        var ckeditor2 = CKEDITOR.replace("editor2");
+                        let ckeditor2 = CKEDITOR.replace("editor2");
                         AjexFileManager.init({
                             returnTo: "ckeditor",
                             editor: ckeditor2

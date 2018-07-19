@@ -117,6 +117,7 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
                                     <li>Status of pay - ' . $statpay . '</li>
                                     <li>Type of pay - <span>' . $row["order_type_pay"] . '</span></li>
                                     <li>Date of pay - <span>' . $row["order_datetime"] . '</span></li>
+                                    <li>Note - <span>' . $row["order_note"] . '</span></li>
                                 </ul>
 
 
