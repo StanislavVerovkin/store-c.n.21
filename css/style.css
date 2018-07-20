@@ -28,8 +28,7 @@ label.error,
 
 .reg_message_good,
 .rem_message_good {
-    font-family: Royal,sans-serif;
-    font-size: 31px;
+    font-family: Royal, sans-serif;
     color: green;
     line-height: 1.2;
     text-transform: uppercase;
@@ -156,7 +155,7 @@ iframe {
 #canvas_about {
     position: relative;
     right: 220px;
-    bottom: 550px;
+    bottom: 500px;
     width: 1700px;
 }
 

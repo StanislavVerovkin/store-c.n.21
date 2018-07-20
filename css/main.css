@@ -1,3 +1,43 @@
+/*------------------------------------------------------------------
+Project:  
+Version:  
+Last change:  
+Assigned to:  Le Xuan Bach
+Primary use:  Company
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[LAYOUT]
+
+* body
+  + Header / header
+  + Page Content / .page-content .name-page
+        + Section Layouts / section .name-section
+        ...
+  + Footer / footer
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[COLOR CODES]
+
+# Text Color      :  
+# Primary Color 01:  
+# Primary Color 02:   
+# Primary Color 03:  
+
+------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[TYPOGRAPHY]
+
+Body            : 16px/1.6 '', Arial, sans-serif;
+Title           : 18px/1.6 '', Arial, sans-serif;
+Paragrap        : 18px/1.6 '', Arial, sans-serif;
+Input, textarea : 14px/1.6 '', Arial, sans-serif;
+-------------------------------------------------------------------*/
+
+/*[ FONT ]
+///////////////////////////////////////////////////////////
+*/
+
 @font-face {
     font-family: Linearicons;
     src: url('../fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf');
@@ -23,6 +63,8 @@
 ///////////////////////////////////////////////////////////
 */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -39,6 +81,7 @@ a {
     font-size: 15px;
     line-height: 1.7;
     color: #666666;
+    margin: 0;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
@@ -56,6 +99,7 @@ a:hover {
 
 /* ------------------------------------ */
 h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 
 p {
@@ -63,9 +107,11 @@ p {
     font-size: 15px;
     line-height: 1.7;
     color: black;
+    margin: 0;
 }
 
 ul, li {
+    margin: 0;
     list-style-type: none;
 }
 
@@ -161,7 +207,7 @@ iframe {
     -o-animation: ball-scale infinite linear .75s;
     animation: ball-scale infinite linear .75s;
     border-radius: 100%;
-    background-color: black;
+    background-color: #000000;
 }
 
 @-webkit-keyframes ball-scale {
@@ -303,9 +349,10 @@ iframe {
 /* in select */
 .select2-container .select2-selection--single .select2-selection__rendered {
     font-size: 13px;
-    font-family: Royal, sans-serif;
+    font-family: Royalб sans-serif;
     line-height: 20px;
     color: #888888;
+    padding-left: 0;
     background-color: transparent;
 }
 
@@ -313,6 +360,7 @@ iframe {
     height: 20px;
     top: 50%;
     transform: translateY(-50%);
+    right: 0;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -347,6 +395,7 @@ iframe {
 .select2-container--open .select2-dropdown {
     z-index: 1251;
     border: 1px solid #e5e5e5;
+    border-radius: 0;
     background-color: white;
 }
 
@@ -374,7 +423,7 @@ iframe {
 .select2-search--dropdown .select2-search__field {
     border: 1px solid #aaa;
     outline: none;
-    font-family: Royal, sans-serif;
+    font-family: Royal,sans-serif;
     font-size: 13px;
     color: #888888;
 }
@@ -470,10 +519,11 @@ iframe {
     left: 0;
     position: fixed;
     z-index: 1100;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-    -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 /*[ Top bar ]
@@ -518,7 +568,7 @@ iframe {
 .topbar-email,
 .topbar-child1,
 .customer {
-    font-family: Royal, sans-serif;
+    font-family: Royal,sans-serif;
     font-size: 13px;
     color: white;
     line-height: 1.7;
@@ -551,7 +601,7 @@ iframe {
     flex-wrap: wrap;
     width: 100%;
     height: 80px;
-    background-color: black;
+    background-color:black;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -605,7 +655,7 @@ iframe {
 }
 
 .main_menu > li > a {
-    font-family: Royal, sans-serif;
+    font-family: Royal,sans-serif;
     font-size: 15px;
     color: white;
     padding: 0;
@@ -759,6 +809,7 @@ li.sale-noti > a {
     -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     -o-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1);
 
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -1122,6 +1173,7 @@ li.sale-noti > a {
     -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     -o-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .fixed-header2 .header-cart {
@@ -1130,6 +1182,7 @@ li.sale-noti > a {
 
 .show-fixed-header2 {
     visibility: visible;
+    top: 0;
 }
 
 /*[ Header3 ]
@@ -1206,6 +1259,7 @@ li.sale-noti > a {
 -----------------------------------------------------------*/
 .container-menu-header-v3 .main_menu {
     list-style-type: none;
+    margin: 0;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -1218,7 +1272,7 @@ li.sale-noti > a {
 }
 
 .container-menu-header-v3 .main_menu > li {
-    padding: 3px;
+    padding: 3px 0;
     text-align: center;
 }
 
@@ -1275,6 +1329,7 @@ li.sale-noti > a {
     }
 
     .container1-page {
+        margin-left: 0;
     }
 }
 
@@ -1456,17 +1511,21 @@ li.sale-noti > a {
 
 @media (max-width: 1280px) {
     .next-slick2 {
+        right: 0;
     }
 
     .prev-slick2 {
+        left: 0;
     }
 }
 
 @media (max-width: 1610px) {
     .rs1-slick2 .next-slick2 {
+        right: 0;
     }
 
     .rs1-slick2 .prev-slick2 {
+        left: 0;
     }
 }
 
@@ -1552,6 +1611,7 @@ li.sale-noti > a {
     -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     -o-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 /*[ Block2 ]
@@ -1887,6 +1947,7 @@ li.sale-noti > a {
     -moz-box-shadow: 0 0 0 2px black;
     -webkit-box-shadow: 0 0 0 2px black;
     -o-box-shadow: 0 0 0 2px black;
+    -ms-box-shadow: 0 0 0px 2px black;
 }
 
 /*[ Pagination ]
@@ -2152,6 +2213,7 @@ li.sale-noti > a {
 
 .tab01 .nav-link {
     padding: 0;
+    border-radius: 0;
     border: none;
     border-bottom: 1px solid transparent;
     font-family: Royal,sans-serif;
@@ -2185,9 +2247,11 @@ li.sale-noti > a {
 ///////////////////////////////////////////////////////////
 */
 body {
+    padding-right: 0 !important;
 }
 
 .modal {
+    padding: 0 !important;
     z-index: 1360;
     overflow-x: hidden;
     overflow-y: auto !important;
