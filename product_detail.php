@@ -96,7 +96,8 @@ if (mysqli_num_rows($result) > 0) {
                         ' . $row['title'] . '
                     </h4>
                     <span class="m-text17">
-					$22
+					$' . $row['price'] . '
+
 				</span>
 
                     ';

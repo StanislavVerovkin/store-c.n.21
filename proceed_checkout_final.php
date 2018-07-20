@@ -56,7 +56,7 @@ if (mysqli_num_rows($result) > 0) {
                   <li class="list-group-item">' . $_SESSION['order_phone'] . '</li>
                   <li class="list-group-item">' . $_SESSION['order_address'] . '</li>
                   <li class="list-group-item">' . $_SESSION['order_delivery'] . '</li>
-                  <li class="list-group-item">' . $_SESSION['order_note'] . '</li>
+                  <li>' . $_SESSION['order_note'] . '</li>
                 </ul>
                 <strong style="position: relative; left: 250px">Total: $' . $total . '</strong>
                 ';
@@ -70,7 +70,7 @@ if (mysqli_num_rows($result) > 0) {
                   <li class="list-group-item">' . $_SESSION['auth_phone'] . '</li>
                   <li class="list-group-item">' . $_SESSION['auth_address'] . '</li>
                   <li class="list-group-item">' . $_SESSION['order_delivery'] . '</li>
-                  <li class="list-group-item">' . $_SESSION['order_note'] . '</li>
+                  <li>' . $_SESSION['order_note'] . '</li>
             </ul>     
             <strong style="position: relative; left: 250px">Total: $' . $total . '</strong>
             ';
