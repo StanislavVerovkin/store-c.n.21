@@ -4,14 +4,15 @@
     background: white;
 }
 
-#block-form-registration {
+#block-form-proceed {
     font-style: italic;
     color: #c7bdbd;
 }
 
 #block-form-registration,
 #block-form-login,
-#block-remind {
+#block-remind,
+#block-form-proceed {
     width: 350px;
 }
 

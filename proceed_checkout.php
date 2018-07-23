@@ -97,17 +97,17 @@ if (isset($_POST['submit_data'])) {
         <hr>
             <ul id="info-radio">
                 <li>
-                    <input required type="radio" name="order_delivery" class="order_delivery" id="order_delivery1" value="Nova Poshta"/>
+                    <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery1" value="Nova Poshta"/>
                     <label class="label_delivery" for="order_delivery1">Nova Poshta (Ukraine, World)</label>
                 </li>
                 <li>
-                    <input required type="radio" name="order_delivery" class="order_delivery" id="order_delivery2" value="Representative of the brand"/>
+                    <input type="radio" name="order_delivery" class="order_delivery" id="order_delivery2" value="Representative of the brand"/>
                     <label class="label_delivery" for="order_delivery2">Representative of the brand (Kiev only)</label>
                 </li>
                 <hr>
             </ul>
             <p id="reg_message"></p>
-             <div id="block-form-registration">
+             <div id="block-form-proceed">
                 <div class="form-group">
                 <label>example: Smith</label>
                     <input type="text" class="form-control" name="order_surname" id="order_surname" placeholder="Surname" value="' . $_SESSION['order_surname'] . '">

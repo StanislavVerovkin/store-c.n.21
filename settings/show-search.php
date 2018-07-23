@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         do {
 
-            echo '<li><a style="font-size: 14px" href="search.php?q=' . $row["title"] . '">' . $row["title"] . '</a></li>';
+            echo '<li><a style="font-size: 14px" href="search?q=' . $row["title"] . '">' . $row["title"] . '</a></li>';
 
         } while ($row = mysqli_fetch_array($result));
     }

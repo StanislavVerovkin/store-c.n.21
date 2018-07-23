@@ -78,6 +78,7 @@ include("reg/auth_cookie.php");
                     required: "Please input your name"
                 },
                 "feed_email": {
+                    required: "Please input your E-mail",
                     email: "Incorrect e-mail"
                 },
                 "feed_message": {

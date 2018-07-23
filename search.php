@@ -166,7 +166,7 @@ switch ($sorting) {
 <!--                    </ul>-->
 
                     <div id="block-search" class="search-product pos-relative bo4 of-hidden">
-                        <form method="get" action="search?q=">
+                        <form method="post" action="search?q=">
                             <input class="s-text7 size6 p-l-23 p-r-50" type="text" id="input-search" name="q"
                                    placeholder="Search Products...">
 
