@@ -97,8 +97,7 @@ if (mysqli_num_rows($result) > 0) {
                     </h4>
                     <span class="m-text17">
 					$' . $row['price'] . '
-
-				</span>
+				    </span>
 
                     ';
 

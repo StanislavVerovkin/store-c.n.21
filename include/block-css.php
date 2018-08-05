@@ -32,4 +32,3 @@
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="/vendor/noui/nouislider.min.css">
 
-

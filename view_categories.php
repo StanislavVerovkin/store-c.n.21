@@ -212,7 +212,7 @@ switch ($sorting) {
                     $num = 9;
                     $page = (int)$_GET['page'];
 
-                    $count = $link->query("SELECT COUNT(*) FROM table_products WHERE category = '$categories' AND family = '$family' AND sale_price = 0");
+                    $count = $link->query("SELECT COUNT(*) FROM table_products WHERE category = '$categories' AND family = '$family'");
                     $temp = mysqli_fetch_array($count);
 
                     if ($temp[0] > 0) {
@@ -229,7 +229,7 @@ switch ($sorting) {
                         $start = $page * $num - $num;
                     }
 
-                    $result = $link->query("SELECT * FROM table_products WHERE family = '$family' AND category = '$categories' AND sale_price = 0 ORDER BY $sorting LIMIT $start, $num");
+                    $result = $link->query("SELECT * FROM table_products WHERE family = '$family' AND category = '$categories' ORDER BY $sorting LIMIT $start, $num");
 
                     if (mysqli_num_rows($result) > 0) {
                         $row = mysqli_fetch_array($result);
