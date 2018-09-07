@@ -79,7 +79,7 @@ if (mysqli_num_rows($result) > 0) {
                 '
                             <div class="item-slick3" data-thumb="/uploads_images/' . $row1['image'] . '">
                                 <div class="wrap-pic-w">
-                                    <img src="/uploads_images/' . $row1['image'] . '" alt="IMG-PRODUCT">
+                                    <img class="picture" src="/uploads_images/' . $row1['image'] . '" alt="IMG-PRODUCT">
                                 </div>
                             </div>
             ';

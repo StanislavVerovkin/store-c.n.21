@@ -160,6 +160,10 @@ iframe {
     width: 1700px;
 }
 
+#grey {
+    background-color: transparent;
+}
+
 #input-search {
     color: black;
 }

@@ -43,7 +43,7 @@ switch ($sorting) {
 <?php include "include/block-header.php"; ?>
 
 <!-- Content page -->
-<section class="bgwhite p-t-55 p-b-65" id="grey">
+<section class="bgwhite p-t-55 p-b-65" >
     <div class="container">
         <div class="row">
 
