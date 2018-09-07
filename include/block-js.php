@@ -176,3 +176,26 @@
         })
     })
 </script>
+
+<script>
+
+    $('.picture').hover(function() {
+        let _this = this,
+            images = _this.getAttribute('data').split(','),
+            counter = 0;
+        this.setAttribute('data-src', this.src);
+
+        if(counter > images.length) {
+            counter = 0;
+        }
+        if (images[counter] != undefined) {
+            _this.src=images[counter];
+        } else {
+            _this.src=_this.getAttribute('data-src');
+        }
+
+    }, function() {
+        this.src = this.getAttribute('data-src');
+    });
+
+</script>

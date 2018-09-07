@@ -79,7 +79,7 @@ if (mysqli_num_rows($result) > 0) {
                 '
                             <div class="item-slick3" data-thumb="/uploads_images/' . $row1['image'] . '">
                                 <div class="wrap-pic-w">
-                                    <img class="picture" src="/uploads_images/' . $row1['image'] . '" alt="IMG-PRODUCT">
+                                    <img src="/uploads_images/' . $row1['image'] . '" alt="IMG-PRODUCT">
                                 </div>
                             </div>
             ';
@@ -94,21 +94,21 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="w-size14 p-t-30 respon5">
                     <h4 class="product-detail-name m-text16 p-b-13">
                         ' . $row['title'] . '
-                    </h4>
-                    <span class="m-text17">
+                    </h4>';
+
+
+    if ($row['label'] == 'labelsale') {
+        echo '<span class="m-text17">
+					$' . $row['sale_price'] . '
+				    </span>';
+    } else {
+        echo '<span class="m-text17">
 					$' . $row['price'] . '
-				    </span>
-
-                    ';
-
-    if ($row['category'] == 'sale') {
-        echo
-            '
-         <span class="m-text17">
-                            $' . $row['sale_price'] . '
-                        </span>
-                                ';
+				    </span>';
     }
+
+
+
 
     echo '
                     <p class="s-text8 p-t-10">
