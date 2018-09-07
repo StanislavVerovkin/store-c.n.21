@@ -10,9 +10,10 @@
 <script type="text/javascript" src="/vendor/sweetalert/sweetalert.min.js"></script>
 <script src="/js/main.js"></script>
 <script src="/js/TextChange.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js"></script>
 <script src="http://malsup.github.com/jquery.form.js"></script>
 <script type="text/javascript" src="/vendor/select2/select2.min.js"></script>
+<script type="text/javascript" src="/vendor/jquery-zoom/jquery.zoom.js"></script>
 
 <script type="text/javascript">
     $(".selection-1").select2({
@@ -29,9 +30,9 @@
 
 
 <script type="text/javascript">
-    $('.block2-btn-addcart').each(function () {
+    $('.block2-btn-addcart').each(() => {
         let nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-        $(this).on('click', function () {
+        $(this).on('click', () => {
             swal(nameProduct, "is added to cart !", "success");
         });
     });

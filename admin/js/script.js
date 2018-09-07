@@ -40,7 +40,7 @@ $(document).ready(function () {
 
         count_input++;
 
-        $('<div id="addimage' + count_input + '" class="addimage"><input type="hidden" name="MAX_FILE_SIZE" value="2000000"/><input type="file" name="galleryimg[]" /><a class="delete-input" rel="' + count_input + '" >Delete</a></div>').fadeIn(300).appendTo('#objects');
+        $('<div id="addimage' + count_input + '" class="addimage"><input type="hidden" name="MAX_FILE_SIZE" value="50000000"/><input type="file" name="galleryimg[]" /><a class="delete-input" rel="' + count_input + '" >Delete</a></div>').fadeIn(300).appendTo('#objects');
 
     });
 

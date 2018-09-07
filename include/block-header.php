@@ -37,9 +37,8 @@
                   ';
                 } else {
                     echo '<a href="/registration" class="topbar-email">Sign in</a>
-                            <li>
                                 <a class="customer" href="/customer_care">Customer care</a>
-                            </li>';
+                            ';
                 }
                 ?>
 

@@ -56,7 +56,7 @@ if (mysqli_num_rows($result) > 0) {
                   <li class="list-group-item">' . $_SESSION['order_phone'] . '</li>
                   <li class="list-group-item">' . $_SESSION['order_address'] . '</li>
                   <li class="list-group-item">' . $_SESSION['order_delivery'] . '</li>
-                  <li>' . $_SESSION['order_note'] . '</li>
+                  <li>' . $_POST['order_note'] . '</li>
                 </ul>
                 <strong style="position: relative; left: 250px">Total: $' . $total . '</strong>
                 ';
@@ -78,12 +78,12 @@ if (mysqli_num_rows($result) > 0) {
         ?>
         <div class="w-size2 p-t-20">
             <form method="post" action="https://wl.walletone.com/checkout/checkout/Index">
-                <input type="hidden" name="WMI_MERCHANT_ID" value="124470780570"/>
-                <input type="hidden" name="WMI_PAYMENT_AMOUNT" value="1"/>
-                <input type="hidden" name="WMI_CURRENCY_ID" value="840"/>
+                <input type="hidden" name="WMI_MERCHANT_ID" value="150503285577"/>
+                <input type="hidden" name="WMI_PAYMENT_AMOUNT" value="<?php echo $total ?>"/>
+                <input type="hidden" name="WMI_CURRENCY_ID" value="978"/>
                 <input type="hidden" name="WMI_PAYMENT_NO" value="<?php echo $_SESSION["order_id"] ?>"/>
-                <input type="hidden" name="WMI_DESCRIPTION" value="Pay for product"/>
-                <input type="hidden" name="WMI_SUCCESS_URL" value="https://myshop.ru/w1/paid.php"/>
+                <input type="hidden" name="WMI_DESCRIPTION" value="payment"/>
+                <input type="hidden" name="WMI_SUCCESS_URL" value="http://c-n-21.com/payment.php"/>
                 <input type="hidden" name="WMI_FAIL_URL" value="https://myshop.ru/w1/fail.php"/>
                 <input class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" value="Pay" type="submit"/>
             </form>

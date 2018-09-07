@@ -45,6 +45,11 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
             unset($_POST["upload_image"]);
         }
 
+        if (empty($_POST["upload_image_second"])) {
+            include("include/upload_image_second.php");
+            unset($_POST["upload_image_second"]);
+        }
+
         if (empty($_POST["galleryimg"])) {
             include("include/upload-gallery.php");
             unset($_POST["galleryimg"]);
@@ -120,9 +125,15 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
 
                 <label class="stylelabel">Image</label>
                 <div id="baseimg-upload">
-                    <input type="hidden" name="MAX_FILE_SIZE" value="5000000"/>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="50000000"/>
                     <input type="file" name="upload_image"/>
                 </div>
+                <label class="stylelabel">Second Image</label>
+                <div id="baseimg-upload">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="50000000"/>
+                    <input type="file" name="upload_image_second"/>
+                </div>
+
                 <h3 class="h3click">Short description</h3>
                 <div class="div-editor1">
                     <textarea id="editor1" name="txt1" cols="100" rows="20"></textarea>
@@ -148,7 +159,7 @@ if ($_SESSION['auth_admin'] == "yes_auth") {
                 <label class="stylelabel">Gallery images</label>
                 <div id="objects">
                     <div id="addimage1" class="addimage">
-                        <input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
+                        <input type="hidden"/>
                         <input type="file" name="galleryimg[]"/>
                     </div>
                 </div>

@@ -226,14 +226,15 @@ switch ($sorting) {
                         <!-- Block2 -->
                         <div class="block2">
                             <div class="block2-img wrap-pic-w of-hidden pos-relative block2-' . $row['label'] . '">
-                                <img src="/uploads_images/' . $row['image'] . '"
-                                     alt="IMG-PRODUCT">
-                               
+                                <img class="picture" src="/uploads_images/' . $row['image'] . '
+                                " data="/uploads_images/' . $row['second_image'] . '"
+                                >
                             </div>
                             <div class="block2-txt p-t-20">
                                 <a href="/product_detail?id=' . $row['products_id'] . '" class="block2-name dis-block s-text3 p-b-5">
                                     ' . $row['title'] . '
-                                </a>';
+                                </a>
+                                ';
 
                             if ($row['label'] == 'labelsale') {
                                 echo '
@@ -255,7 +256,8 @@ switch ($sorting) {
                             echo '
                             </div>
                         </div>
-                    </div>';
+                    </div>
+                    ';
                         } while ($row = mysqli_fetch_assoc($result));
                     }
                     ?>
@@ -270,6 +272,29 @@ switch ($sorting) {
 
 <?php include "include/block-footer.php" ?>
 <?php include "include/block-js.php"; ?>
+
+<script>
+
+    $('.picture').hover(function() {
+        let _this = this,
+            images = _this.getAttribute('data').split(','),
+            counter = 0;
+        this.setAttribute('data-src', this.src);
+
+            if(counter > images.length) {
+                counter = 0;
+            }
+            if (images[counter] != undefined) {
+                _this.src=images[counter];
+            } else {
+                _this.src=_this.getAttribute('data-src');
+            }
+
+    }, function() {
+        this.src = this.getAttribute('data-src');
+    });
+
+</script>
 
 </body>
 </html>

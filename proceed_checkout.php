@@ -8,7 +8,7 @@ if (isset($_POST['submit_data'])) {
 
     if ($_SESSION['auth'] == 'yes_auth') {
 
-        $link->query("INSERT INTO orders(order_datetime,order_delievery,order_name, order_surname,order_address,order_phone,order_email)
+        $link->query("INSERT INTO orders(order_datetime,order_delievery,order_name, order_surname,order_address,order_phone,order_email, order_note)
 						VALUES(	
                              NOW(),
                             '" . $_POST["order_delivery"] . "',					
@@ -16,7 +16,8 @@ if (isset($_POST['submit_data'])) {
 							'" . $_SESSION['auth_surname'] . "',
                             '" . $_SESSION['auth_address'] . "',
                             '" . $_SESSION['auth_phone'] . "',
-                            '" . $_SESSION['auth_email'] . "'                              
+                            '" . $_SESSION['auth_email'] . "',
+                            '".$_POST['order_note']."'                              
 						    )");
 
     } else {
@@ -126,7 +127,7 @@ if (isset($_POST['submit_data'])) {
                 </div>
                 <div class="form-group">
                     <label>example: str. Kreschatik 14, apt. 13</label>
-                    <input type="text" class="form-control" name="order_address" id="order_address"placeholder="Address" value="' . $_SESSION['order_address'] . '"/>
+                    <input type="text" class="form-control" name="order_address" id="order_address" placeholder="Address" value="' . $_SESSION['order_address'] . '"/>
                 <div class="form-group">
                     <textarea rows="3" style="border: none; margin-top: 30px;" type="text" placeholder="Post office number or Additional info" class="form-control" name="order_note" id="order_note">' . $_SESSION['order_note'] . '</textarea>
                 </div>
