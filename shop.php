@@ -46,12 +46,11 @@ switch ($sorting) {
 <section class="bgwhite p-t-55 p-b-65">
     <div class="container">
         <div class="row">
-
             <?php include "include/block-categories.php"; ?>
-
             <div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
                 <!--  -->
                 <div class="flex-sb-m flex-w p-b-35">
+
                     <div class="flex-w">
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -100,7 +99,7 @@ switch ($sorting) {
                         <!-- Block2 -->
                         <div class="block2">
                             <div class="block2-img wrap-pic-w of-hidden pos-relative block2-' . $row['label'] . '">
-                                <img class="picture" src="/uploads_images/' . $row['image'] . '
+                                <img class="pic" src="/uploads_images/' . $row['image'] . '
                                 "data="/uploads_images/' . $row['second_image'] . '"
                                 >
                             </div>
@@ -113,10 +112,10 @@ switch ($sorting) {
                             if ($row['label'] == 'labelsale') {
                                 echo '
                                     <span class="block2-oldprice m-text7 p-r-5">
-                                        $' . $row['price'] . '
+                                        &#8364;' . $row['price'] . '
 									</span>
 									<span class="block2-newprice m-text8 p-r-5">
-                                        $' . $row['sale_price'] . '
+                                        &#8364;' . $row['sale_price'] . '
 									</span>
 									';
                             } else {
@@ -132,6 +131,7 @@ switch ($sorting) {
                         </div>
                     </div>
                     ';
+
                         } while ($row = mysqli_fetch_assoc($result));
                     }
                     ?>

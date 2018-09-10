@@ -145,7 +145,7 @@ if (isset($_POST['submit_data'])) {
             echo '
                   <p class="reg_message_good">Your contact data successfully saved after authorization</p>
                                      <hr>
-            <form method="post">
+            <form method="post" id="form_checkout">
                    <h4>Delivery methods:</h4>
                    <hr>
             <ul id="info-radio">
@@ -195,6 +195,9 @@ if (isset($_POST['submit_data'])) {
             },
             "order_address": {
                 required: true
+            },
+            "order_delivery": {
+                required: true
             }
         },
         messages: {
@@ -212,6 +215,9 @@ if (isset($_POST['submit_data'])) {
             },
             "order_address": {
                 required: "Please input your address for delivery"
+            },
+            "order_delivery" : {
+                required: "Please choose your way of delivery"
             }
         }
     });

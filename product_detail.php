@@ -79,7 +79,7 @@ if (mysqli_num_rows($result) > 0) {
                 '
                             <div class="item-slick3" data-thumb="/uploads_images/' . $row1['image'] . '">
                                 <div class="wrap-pic-w">
-                                    <img class="picture" src="/uploads_images/' . $row1['image'] . '" alt="IMG-PRODUCT">
+                                    <img class="picture" src="/uploads_images/' . $row1['image'] . '">
                                 </div>
                             </div>
             ';
@@ -99,11 +99,11 @@ if (mysqli_num_rows($result) > 0) {
 
     if ($row['label'] == 'labelsale') {
         echo '<span class="m-text17">
-					$' . $row['sale_price'] . '
+					&#8364;' . $row['sale_price'] . '
 				    </span>';
     } else {
         echo '<span class="m-text17">
-					$' . $row['price'] . '
+					&#8364;' . $row['price'] . '
 				    </span>';
     }
 

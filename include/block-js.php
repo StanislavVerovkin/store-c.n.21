@@ -179,7 +179,7 @@
 
 <script>
 
-    $('.picture').hover(function() {
+    $('.pic').hover(function() {
         let _this = this,
             images = _this.getAttribute('data').split(','),
             counter = 0;

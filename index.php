@@ -12,9 +12,10 @@ if (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|
 <!--suppress ALL -->
 <html lang="en">
 <head>
-    <title>C.N.21 | Store</title>
+    <title>C.N.21 | Store of street style clothes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="С.N.21 - self-identification, a brand that connects high and street fashion into a single whole. A kind of hybrid, which is a mixture of street culture and classical fashion. Largely inspired by youth and street culture C.N.21 calls this 'Street Tailoring'.">
     <?php include "include/block-css.php"; ?>
 </head>
 
